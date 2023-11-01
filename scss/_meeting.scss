@@ -2,6 +2,19 @@
     padding-top: 50px;
     justify-content: space-between;
     margin: 0px 0px;
+    .alertPlaceholder{
+        display: flex;
+        justify-content: end;
+        position: sticky;
+        bottom: 0px;
+        right: 0px;
+        .alertLayout{
+            background: linear-gradient(to right,$color_2,$color_3);
+            color: black;
+            width: 200px;
+            height: fit-content;
+        }
+    }
     .onlyLine{
         margin: 0px 0px;
         height: 25px;
@@ -49,7 +62,6 @@
         }
 }
 }
-
 .meetingRoom{
     min-height: 1000px;
     object-fit: cover;
@@ -65,53 +77,53 @@
         padding-top: 5%;
         padding-left: 10%;
         padding-right: 10%;
-        ul{
-            text-align: left;
-            justify-content: left;
-            li{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .detailsMeeting{
+            text-align: justify;
+            justify-content: center;
             background-color: white;
-            }
-            .detailsMeeting{
-                text-align: justify;
-                .card{
-                    width: 50rem;
-                    min-height: 500px;
-                    margin: 5px 5px;
-                    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
-                    &:hover{
-                        width: 51rem;
-                        background-color: $color_2;
-                        color: whitesmoke;
-                    }
-                    div{
-                        align-items: center;
-                        text-align: justify;
-                        justify-content: start;
-                    }
-                    .escButton{
-                        width: 95%;
-                        height: 25px;
-                        font-weight: bold;
-                        font-size: 1.5rem;
-                        text-align: end;
-                        justify-content: end;
-                        align-items: end;
-                        button{
-                            border: 1px solid 
-                            black;
-                            padding: 1px 5px;
-                            transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-                            &:hover{
-                                border: none;
-                                background-color: red;
-                            }
-                            &:active{
-                                color: whitesmoke;
-                            }
+            .cardContainer{
+            margin: 5px 5px;
+            .card{
+                min-height: 500px;
+                width: 50rem;
+                transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
+                &:hover{
+                    width: 51rem;
+                    background-color: $color_2;
+                    color: whitesmoke;
+                }
+                div{
+                    align-items: center;
+                    text-align: justify;
+                    justify-content: start;
+                }
+                .escButton{
+                    width: 95%;
+                    height: 25px;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                    text-align: end;
+                    justify-content: end;
+                    align-items: end;
+                    button{
+                        border: 1px solid 
+                        black;
+                        padding: 1px 5px;
+                        transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+                        &:hover{
+                            border: none;
+                            background-color: red;
+                        }
+                        &:active{
+                            color: whitesmoke;
                         }
                     }
-                    }
-            }
+                }
+                }
+            }   
         }
         .meetingTitle{
             font-weight: lighter;

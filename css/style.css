@@ -42,7 +42,7 @@ html {
   justify-content: flex-end;
 }
 .header .navbar .headerTwo .console {
-  margin-right: 20px;
+  margin-right: 10px;
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 6px;
@@ -89,9 +89,9 @@ html {
 .home1 {
   background-image: url("../img/perrosalchicha.png");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: 100% 660px;
   object-fit: cover;
-  min-height: 400px;
+  min-height: 500px;
 }
 .home1 .imageHome {
   min-height: 500px;
@@ -142,7 +142,18 @@ html {
 .home2 {
   padding-top: 50px;
   margin: 0px 0px;
-  justify-content: baseline;
+  text-align: end;
+}
+.home2 .alertPlaceholder {
+  display: flex;
+  justify-content: end;
+  position: sticky;
+  bottom: 0px;
+  right: 0px;
+}
+.home2 .alertPlaceholder .alertLayout {
+  background: linear-gradient(to right, rgb(165, 165, 255), rgb(199, 205, 255));
+  color: black;
 }
 .home2 .onlyLine {
   margin: 0px 0px;
@@ -188,7 +199,7 @@ html {
   color: white;
 }
 .home2 .leftMenu a:link {
-  color: white;
+  color: black;
 }
 .home2 .refugee {
   margin-left: 0px;
@@ -196,48 +207,21 @@ html {
   padding-top: 50px;
   object-fit: contain;
   padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.home2 .lineDogs1 {
+.home2 .lineDogs {
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-.home2 .lineDogs1 .card {
+.home2 .lineDogs .card {
   width: 14rem;
   margin: 5px 5px;
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
 }
-.home2 .lineDogs1 .card:hover {
-  width: 20rem;
-  background-color: rgb(165, 165, 255);
-  color: whitesmoke;
-}
-.home2 .lineDogs2 {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.home2 .lineDogs2 .card {
-  width: 14rem;
-  margin: 5px 5px;
-  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
-}
-.home2 .lineDogs2 .card:hover {
-  width: 20rem;
-  background-color: rgb(165, 165, 255);
-  color: whitesmoke;
-}
-.home2 .lineDogs3 {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-.home2 .lineDogs3 .card {
-  width: 14rem;
-  margin: 5px 5px;
-  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
-}
-.home2 .lineDogs3 .card:hover {
+.home2 .lineDogs .card:hover {
   width: 20rem;
   background-color: rgb(165, 165, 255);
   color: whitesmoke;
@@ -395,6 +379,19 @@ html {
   justify-content: space-between;
   margin: 0px 0px;
 }
+.main3 .alertPlaceholder {
+  display: flex;
+  justify-content: end;
+  position: sticky;
+  bottom: 0px;
+  right: 0px;
+}
+.main3 .alertPlaceholder .alertLayout {
+  background: linear-gradient(to right, rgb(165, 165, 255), rgb(199, 205, 255));
+  color: black;
+  width: 200px;
+  height: fit-content;
+}
 .main3 .onlyLine {
   margin: 0px 0px;
   height: 25px;
@@ -458,34 +455,34 @@ html {
   padding-top: 5%;
   padding-left: 10%;
   padding-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.meetingRoom .meetingDetails ul {
-  text-align: left;
-  justify-content: left;
-}
-.meetingRoom .meetingDetails ul li {
+.meetingRoom .meetingDetails .detailsMeeting {
+  text-align: justify;
+  justify-content: center;
   background-color: white;
 }
-.meetingRoom .meetingDetails ul .detailsMeeting {
-  text-align: justify;
-}
-.meetingRoom .meetingDetails ul .detailsMeeting .card {
-  width: 50rem;
-  min-height: 500px;
+.meetingRoom .meetingDetails .detailsMeeting .cardContainer {
   margin: 5px 5px;
+}
+.meetingRoom .meetingDetails .detailsMeeting .cardContainer .card {
+  min-height: 500px;
+  width: 50rem;
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
 }
-.meetingRoom .meetingDetails ul .detailsMeeting .card:hover {
+.meetingRoom .meetingDetails .detailsMeeting .cardContainer .card:hover {
   width: 51rem;
   background-color: rgb(165, 165, 255);
   color: whitesmoke;
 }
-.meetingRoom .meetingDetails ul .detailsMeeting .card div {
+.meetingRoom .meetingDetails .detailsMeeting .cardContainer .card div {
   align-items: center;
   text-align: justify;
   justify-content: start;
 }
-.meetingRoom .meetingDetails ul .detailsMeeting .card .escButton {
+.meetingRoom .meetingDetails .detailsMeeting .cardContainer .card .escButton {
   width: 95%;
   height: 25px;
   font-weight: bold;
@@ -494,16 +491,16 @@ html {
   justify-content: end;
   align-items: end;
 }
-.meetingRoom .meetingDetails ul .detailsMeeting .card .escButton button {
+.meetingRoom .meetingDetails .detailsMeeting .cardContainer .card .escButton button {
   border: 1px solid black;
   padding: 1px 5px;
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
-.meetingRoom .meetingDetails ul .detailsMeeting .card .escButton button:hover {
+.meetingRoom .meetingDetails .detailsMeeting .cardContainer .card .escButton button:hover {
   border: none;
   background-color: red;
 }
-.meetingRoom .meetingDetails ul .detailsMeeting .card .escButton button:active {
+.meetingRoom .meetingDetails .detailsMeeting .cardContainer .card .escButton button:active {
   color: whitesmoke;
 }
 .meetingRoom .meetingDetails .meetingTitle {
